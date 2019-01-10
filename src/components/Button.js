@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#FDCE38',
     fontWeight: 'normal',
-    fontSize: 24,
+    fontSize: 18,
     fontFamily: 'Trebuchet MS',
   }
 });

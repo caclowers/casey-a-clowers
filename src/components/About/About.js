@@ -76,21 +76,27 @@ class About extends Component {
 
   render() {
     let logoArray = logos.map((logo, index) => {
-      return <Image
-        className="logoImg"
-        key={index}
-        source={logo.logo}
-        title={logo.info}
-        alt={logo.info}
-        style={styles.image}>
-      </Image>
+      return (
+        <View key={index} style={styles.container}>
+          <Image
+            // className="logoImg"
+            source={logo.logo}
+            title={logo.info}
+            alt={logo.info}
+            style={styles.image}>
+          </Image>
+          <Text style={styles.container}>{logo.info}</Text>
+        </View>
+      )
     })
+
     return (
+
       <ScrollView contentContainerStyle={styles.contentContainer}>
-        
-        <Text>some stuff i've learned with my brain (a non-comprehensive list)</Text>
-        <View style={styles.array}>
+        <Text style={styles.container}>some stuff i've learned with my brain (a non-comprehensive list)</Text>
           {logoArray}
+        <View 
+          style={{height:80}}>
         </View>
       </ScrollView>
       
@@ -102,29 +108,29 @@ const styles = StyleSheet.create({
   contentContainer: {
     flex: 0,
     fontFamily: 'Trebuchet MS',
-    color: 'black',
-    backgroundColor: 'white',
+    color: 'white',
+    backgroundColor: '#282c34',
     alignItems: 'center',
     justifyContent: 'center',
-    
   },
-  array: {
-    flex: 0,
+  container: {
     alignItems: 'center',
     justifyContent: 'center',
-    width: '50%'
+    color: 'white',
+    fontFamily: 'Trebuchet MS',
+    fontSize: 18,
+    fontWeight: 'bold',
+
   },
   image: {
     marginTop: 48,
-    borderColor: 'black',
+    borderColor: 'white',
     borderWidth: 2,
     borderRadius: 8,
     padding: 12,
-    width: '85%',
-    height: 300
+    width: 300,
+    height: 350
   }
-  
- 
 });
 
 export default About;

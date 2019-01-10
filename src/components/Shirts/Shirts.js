@@ -45,32 +45,68 @@ let shirts = [
 
 class Shirts extends Component {
 
+  static navigationOptions = {
+    title: 'Some Shirts',
+  //   headerStyle: { backgroundColor: '#090446' },
+  // headerTitleStyle: { color: 'white' },
+  }
 
 
   render() {
     let shirtArray = shirts.map((shirt, index) => {
       return (
-        <div id="shirts" key={index}>
-          <img 
-          className="craftImg" 
-          src={shirt.image} 
+        <View key={index} style={styles.container}>
+          <Image  
+          source={shirt.image} 
           title={shirt.tag}
-          alt={shirt.tag} >
-          </img>
-          <p>{shirt.tag}</p>
-        </div>
+          alt={shirt.tag} 
+          style={styles.image}>
+          </Image>
+          <Text style={styles.container}>{shirt.tag}</Text>
+        </View>
         
       )
     })
     return (
-      <section className="section">
-        <h3>some apparel which i have made... hand-traced on a lightbox with Sharpie</h3>
-        <Carousel>
+      <ScrollView contentContainerStyle={styles.contentContainer}>
+        <Text style={styles.container}>some apparel which i have made... hand-traced on a lightbox with Sharpie</Text>
+        
           {shirtArray}
-        </Carousel>
-      </section>
+        <View 
+          style={{height:80}}>
+        </View>
+      </ScrollView>
     )
   };
 };
+
+const styles = StyleSheet.create({
+  contentContainer: {
+    flex: 0,
+    fontFamily: 'Trebuchet MS',
+    color: 'white',
+    backgroundColor: '#282c34',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  container: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: 'white',
+    fontFamily: 'Trebuchet MS',
+    fontSize: 18,
+    fontWeight: 'bold',
+
+  },
+  image: {
+    marginTop: 48,
+    borderColor: 'white',
+    borderWidth: 2,
+    borderRadius: 8,
+    padding: 12,
+    width: 300,
+    height: 350
+  }
+});
 
 export default Shirts;

@@ -52,36 +52,71 @@ let images = [
 ]
 class Crafts extends Component {
 
+  static navigationOptions = {
+    title: 'Handi-Crafts',
+  //   headerStyle: { backgroundColor: '#090446' },
+  // headerTitleStyle: { color: 'white' },
+  }
+
 
   render() {
     let craftArray = images.map((craft, index) => {
       return (
-        <div id="crafts" key={index} >
-          <img
-            className="craftImg"
-            src={craft.image}
+        <View  key={index} style={styles.container} >
+          <Image
+            // className="craftImg"
+            style={styles.image}
+            source={craft.image}
             title={craft.info}
             alt={craft.tag}>
-          </img>
-          <h4>{craft.tag}</h4>
-        </div>
+          </Image>
+          <Text style={styles.container}>{craft.tag}</Text>
+        </View>
       )
     })
-
+    
     return (
 
-      <section className="section">
-        <h3>some things i've made with my hands</h3>
-        
-          <Carousel>
+      <ScrollView contentContainerStyle={styles.contentContainer}>
+        <Text style={styles.container}>some things i've made with my hands</Text>
             {craftArray}
-          </Carousel>
-       
-      </section>
+        <View 
+          style={{height:80}}>
+        </View>
+       </ScrollView>
 
     )
   }
 };
+
+const styles = StyleSheet.create({
+  contentContainer: {
+    flex: 0,
+    fontFamily: 'Trebuchet MS',
+    color: 'white',
+    backgroundColor: '#282c34',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  container: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: 'white',
+    fontFamily: 'Trebuchet MS',
+    fontSize: 18,
+    fontWeight: 'bold',
+
+  },
+  image: {
+    marginTop: 48,
+    borderColor: 'white',
+    borderWidth: 2,
+    borderRadius: 8,
+    padding: 12,
+    width: 300,
+    height: 350
+  }
+});
 
 export default Crafts;
 
