@@ -1,0 +1,236 @@
+a{
+  color: white;
+  margin: 1rem;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h6{
+  margin: 0;
+}
+
+li{
+  list-style-type: none;
+}
+
+.App {
+  text-align: center;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center */
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Array{
+  background-color: #078E8B;
+  border: 0.25rem solid white;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem black; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  position: relative;
+  width: 85%;
+}
+
+.control-arrow{
+  width: 25%;
+}
+
+.control-arrow:hover{
+  color: white;
+  border: 0.25rem solid #282c34;
+}
+
+.craftImg{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  margin:1rem;
+  border: 0.125rem solid #282c34;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem #282c34; 
+}
+
+.giphy-embed:hover{
+  animation: swaying 3s ease-in-out infinite;
+}
+
+.itemSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+  width: 100%;
+}
+
+.section{
+  margin-top: 8rem;
+}
+
+.swaying {
+  border-radius: 1rem;
+  height: 25rem;
+	animation: swaying 3s ease-in-out infinite;
+}
+
+
+
+#about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 3rem 0;
+}
+
+#bottomButtons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 35%;
+  margin-top: 1rem;
+}
+
+#crafts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 2rem;
+  width: 100%;
+}
+
+#crafts img{
+  height: 24rem;
+  width: auto;
+}
+
+
+#focus{
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+  width:100%
+}
+
+#futurePic{
+  background-color: #078E8B;
+  border: 4px solid white;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem black; 
+  width: 85%;
+}
+
+#futurePic img{
+  width: 50%;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem black; 
+}
+
+
+#headerInfo{
+  display: flex;
+  flex-direction: column;
+  width:50%;
+}
+
+#headerPic{
+  display: flex;
+  flex-direction: column;
+  margin: 3rem;
+}
+
+#iframeDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18rem;
+  margin-bottom: 12rem;
+  width: 100%;
+}
+
+#iframeDiv iframe{
+  width: 50%;
+}
+
+#logoArray{
+  background-color: #078E8B;
+  max-height: 5rem;
+  border: 0.25rem solid white;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem black; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  width: 85%;
+}
+
+#shirts{
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  margin-top: 0;
+  width: 85%; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 2rem;
+  width: 100%;
+}
+#shirts img{
+  height: 24rem;
+  width: auto;
+}
+
+#upperHeader{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 6rem;
+  width: 100%;
+  float: left;
+}
+
+#upperHeader button{
+  background-color: #282c34;
+  border: none;
+  font-size: 0.15rem;
+  color: white;
+  text-decoration-line: underline;
+}
+
+#upperHeader button:hover{
+  color: chartreuse;
+  text-decoration-line: underline;
+}
+
+@keyframes swaying {
+	0% {transform: translateX(-10px) rotate(-2deg);}
+	25% {transform: translateX(10px) rotate(2deg);}
+	50% {transform: translateX(-10px) rotate(-2deg);}
+	75% {transform: translateX(10px) rotate(2deg);}
+	100% {transform: translateX(-10px) rotate(-2deg);}
+}
+
