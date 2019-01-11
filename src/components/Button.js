@@ -29,17 +29,22 @@ return (
 }
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#052F5F',
-    borderWidth: 1,
-    borderColor: '#052F5F',
-    marginTop: 25,
-    width: "75%",
-    padding: 20,
-    borderRadius: 8
+    backgroundColor: '#6B6570',
+    borderWidth: 2,
+    borderColor: '#59C3C3',
+    margin: 4,
+    width: 112,
+    height: 50,
+    // padding: 14,
+    borderRadius: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 24
   },
   text: {
-    textAlign: 'center',
-    color: '#FDCE38',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: '#59C3C3',
     fontWeight: 'normal',
     fontSize: 18,
     fontFamily: 'Trebuchet MS',

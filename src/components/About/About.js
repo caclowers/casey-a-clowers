@@ -72,7 +72,11 @@ const logos = [
 
 class About extends Component {
 
-
+  static navigationOptions = {
+    title: 'Handi-Crafts',
+    headerStyle: { backgroundColor: '#282c34' },
+  headerTitleStyle: { color: '#59C3C3', fontWeight: 'bold' },
+  }
 
   render() {
     let logoArray = logos.map((logo, index) => {
@@ -93,8 +97,14 @@ class About extends Component {
     return (
 
       <ScrollView contentContainerStyle={styles.contentContainer}>
-        <Text style={styles.container}>some stuff i've learned with my brain (a non-comprehensive list)</Text>
+        <View>
+          <StatusBar barStyle="light-content"/>
+        </View>
+        <Text style={styles.container}>some stuff i've learned with my brain</Text>
+        <Text style={{color: '#59C3C3', fontFamily: 'Trebuchet MS', fontSize: 12, fontWeight: 'bold'}}>(a non-comprehensive list)</Text>
+          
           {logoArray}
+        
         <View 
           style={{height:80}}>
         </View>
@@ -108,7 +118,7 @@ const styles = StyleSheet.create({
   contentContainer: {
     flex: 0,
     fontFamily: 'Trebuchet MS',
-    color: 'white',
+    color: '#59C3C3',
     backgroundColor: '#282c34',
     alignItems: 'center',
     justifyContent: 'center',
@@ -116,15 +126,15 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center',
-    color: 'white',
+    color: '#59C3C3',
     fontFamily: 'Trebuchet MS',
     fontSize: 18,
     fontWeight: 'bold',
-
+    marginTop: 12
   },
   image: {
     marginTop: 48,
-    borderColor: 'white',
+    borderColor: '#59C3C3',
     borderWidth: 2,
     borderRadius: 8,
     padding: 12,

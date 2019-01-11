@@ -17,8 +17,8 @@ class App extends React.Component {
 
   static navigationOptions = {
     title: 'Casey A. Clowers',
-  //   headerStyle: { backgroundColor: '#090446' },
-  // headerTitleStyle: { color: 'white' },
+    headerStyle: { backgroundColor: '#282c34' },
+  headerTitleStyle: { color: '#59C3C3', fontWeight: 'bold' },
   }
 
   onButtonPressAbout = () => {
@@ -49,6 +49,9 @@ class App extends React.Component {
   render() {
     return (
       <ScrollView contentContainerStyle={styles.contentContainer}>
+        <View>
+          <StatusBar barStyle="light-content"/>
+        </View>
         <View style={styles.container}>
           <Text style={styles.container}>howdy!</Text>
           <Image
@@ -67,7 +70,7 @@ class App extends React.Component {
           onPress={this.onButtonPressShirts}/>
         </View>
         <View 
-          style={{height:80}}>
+          style={{height:40}}>
         </View>
       </ScrollView>
     );
@@ -84,22 +87,25 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   buttons: {
-    flex: 0,
-    flexDirection: "row"
+    flex: 0, 
+    flexDirection: 'row', 
+    alignItems: 'center',
+    justifyContent: 'space-evenly'
   },
   container: {
     flex: 0,
     alignItems: 'center',
     justifyContent: 'center',
-    color: 'white',
+    color: '#59C3C3',
     fontFamily: 'Trebuchet MS',
     fontSize: 18,
     fontWeight: 'bold',
+    marginTop: 12
   },
   image: {
     flex: 0,
-    marginTop: 48,
-    borderColor: 'white',
+    marginTop: 24,
+    borderColor: '#59C3C3',
     borderWidth: 2,
     borderRadius: 8,
     padding: 12,
