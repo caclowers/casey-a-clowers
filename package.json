@@ -20,7 +20,7 @@
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
-    "event-stream": "^3.3.4",
+    "event-stream": "3.3.4",
     "expo": "^32.0.0",
     "expo-core": "^2.0.0",
     "expo-permissions": "^2.0.0",
