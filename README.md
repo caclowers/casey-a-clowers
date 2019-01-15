@@ -1,4 +1,6 @@
-# casey-a-clowers (a mobile version of my personal homepage)
+# casey-a-clowers 
+
+(a mobile version of my personal homepage)
 
 # hello, friend
 
